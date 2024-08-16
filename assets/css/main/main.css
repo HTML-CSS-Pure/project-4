@@ -1,0 +1,602 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-Black.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-Bold.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-BlackItalic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-ExtraLightItalic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-ExtraBoldItalic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-ExtraBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-Italic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-ExtraLight.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-ExtraBold.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-BoldItalic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-Medium.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-Light.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-LightItalic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-MediumItalic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-SemiBold.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-SemiBoldItalic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-ThinItalic.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-Thin.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins/Poppins-Regular.woff2") format("woff2"), url("../../fonts/Poppins/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/**
+* @license
+*
+* Font Family: Sora
+* Designed by: Jonathan Barnbrook, Julián Moncada
+* URL: https://www.fontshare.com/fonts/sora
+* © 2024 Indian Type Foundry
+*
+* Sora Thin 
+* Sora ThinItalic 
+* Sora ExtraLight 
+* Sora ExtraLightItalic 
+* Sora Light 
+* Sora LightItalic 
+* Sora Regular 
+* Sora Italic 
+* Sora Medium 
+* Sora MediumItalic 
+* Sora SemiBold 
+* Sora SemiBoldItalic 
+* Sora Bold 
+* Sora BoldItalic 
+* Sora ExtraBold 
+* Sora ExtraBoldItalic 
+* Sora Variable (Variable font)
+* Sora VariableItalic (Variable font)
+
+*
+*/
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-Thin.woff2") format("woff2"), url("../../font/sora/Sora-Thin.woff") format("woff"), url("../../font/sora/Sora-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-ThinItalic.woff2") format("woff2"), url("../../font/sora/Sora-ThinItalic.woff") format("woff"), url("../../font/sora/Sora-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-ExtraLight.woff2") format("woff2"), url("../../font/sora/Sora-ExtraLight.woff") format("woff"), url("../../font/sora/Sora-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-ExtraLightItalic.woff2") format("woff2"), url("../../font/sora/Sora-ExtraLightItalic.woff") format("woff"), url("../../font/sora/Sora-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-Light.woff2") format("woff2"), url("../../font/sora/Sora-Light.woff") format("woff"), url("../../font/sora/Sora-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-LightItalic.woff2") format("woff2"), url("../../font/sora/Sora-LightItalic.woff") format("woff"), url("../../font/sora/Sora-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-Regular.woff2") format("woff2"), url("../../font/sora/Sora-Regular.woff") format("woff"), url("../../font/sora/Sora-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-Italic.woff2") format("woff2"), url("../../font/sora/Sora-Italic.woff") format("woff"), url("../../font/sora/Sora-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-Medium.woff2") format("woff2"), url("../../font/sora/Sora-Medium.woff") format("woff"), url("../../font/sora/Sora-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-MediumItalic.woff2") format("woff2"), url("../../font/sora/Sora-MediumItalic.woff") format("woff"), url("../../font/sora/Sora-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-SemiBold.woff2") format("woff2"), url("../../font/sora/Sora-SemiBold.woff") format("woff"), url("../../font/sora/Sora-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-SemiBoldItalic.woff2") format("woff2"), url("../../font/sora/Sora-SemiBoldItalic.woff") format("woff"), url("../../font/sora/Sora-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-Bold.woff2") format("woff2"), url("../../font/sora/Sora-Bold.woff") format("woff"), url("../../font/sora/Sora-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-BoldItalic.woff2") format("woff2"), url("../../font/sora/Sora-BoldItalic.woff") format("woff"), url("../../font/sora/Sora-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-ExtraBold.woff2") format("woff2"), url("../../font/sora/Sora-ExtraBold.woff") format("woff"), url("../../font/sora/Sora-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-ExtraBoldItalic.woff2") format("woff2"), url("../../font/sora/Sora-ExtraBoldItalic.woff") format("woff"), url("../../font/sora/Sora-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+  * This is a variable font
+  * You can control variable axes as shown below:
+  * font-variation-settings: wght 400.0;
+  *
+  * available axes:
+  'wght' (range from 100.0 to 800.0
+  */
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-Variable.woff2") format("woff2"), url("../../font/sora/Sora-Variable.woff") format("woff"), url("../../font/sora/Sora-Variable.ttf") format("truetype");
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+  * This is a variable font
+  * You can control variable axes as shown below:
+  * font-variation-settings: wght 400.0;
+  *
+  * available axes:
+  'wght' (range from 100.0 to 800.0
+  */
+@font-face {
+  font-family: "Sora";
+  src: url("../../font/sora/Sora-VariableItalic.woff2") format("woff2"), url("../../font/sora/Sora-VariableItalic.woff") format("woff"), url("../../font/sora/Sora-VariableItalic.ttf") format("truetype");
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: italic;
+}
+:root {
+  --bg-primary-color: #FFFAF5;
+  --bg-secondary-color: #FFF6ED;
+  --bg-button-color: #FF5B2E;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Sora", sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header {
+  padding: 36px 0px;
+  background: var(--bg-secondary-color);
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .auth {
+  line-height: 1.75;
+}
+.header .auth .login {
+  margin-right: 28px;
+}
+.header .auth .login:hover {
+  color: #fff;
+  text-shadow: 1px 0 0 currentColor;
+}
+.header .auth .sign-up-btn {
+  min-width: 104px;
+  height: 44px;
+  font-size: 1.6rem;
+}
+
+.navbar .list {
+  display: flex;
+  gap: 42px;
+}
+.navbar .list .item:hover,
+.navbar .list .item.active {
+  color: #fff;
+  text-shadow: 1px 0 0 currentColor;
+}
+.navbar .list .item.active::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  position: relative;
+  right: 6px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #fff;
+}
+
+.hero {
+  background: var(--bg-secondary-color);
+  padding: 40px 0 110px;
+  color: #fff;
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-left {
+  width: 44%;
+}
+.hero-left .title {
+  color: #fff;
+  line-height: 1.14;
+  letter-spacing: -1.4px;
+}
+.hero-left .desc {
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+.hero-left .booking {
+  margin-top: 38px;
+}
+.hero-left .booking .btn {
+  margin-right: 38px;
+}
+.hero-right {
+  width: 45%;
+  display: flex;
+  align-items: center;
+}
+.hero-right .img-left,
+.hero-right .img-right {
+  object-fit: cover;
+}
+.hero-right .img-left {
+  width: 330px;
+  height: 540px;
+  border-radius: 6px;
+  z-index: 1;
+}
+.hero-right .img-right {
+  width: 210px;
+  height: 410px;
+  margin-left: -6px;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.footer {
+  font-family: "Open Sans", "san-serif";
+  padding: 100px 0px 42px;
+  margin-top: 170px;
+  background: var(--bg-secondary-color);
+  color: #A9B3BB;
+  font-weight: 400;
+}
+.footer .title {
+  color: #FFF;
+  font-weight: 600;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.footer .category-zone {
+  border-bottom: 1px solid #406181;
+  padding-bottom: 28px;
+  display: grid;
+  grid-template-columns: 1fr 0.41fr 0.41fr 1fr;
+  gap: 78px;
+}
+.footer .category-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+}
+.footer .category-item ul li {
+  font-size: 1.4rem;
+  line-height: 1.85;
+  font-weight: 400;
+}
+.footer .category-item ul li a:hover {
+  opacity: 0.8;
+}
+.footer .category-item ul li ~ li {
+  margin-top: 10px;
+}
+.footer .brand-column .logo-content {
+  line-height: 1.75;
+  margin-top: 21px;
+}
+.footer .copyright {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.85;
+}
+.footer .logo-zone .logo-list {
+  display: flex;
+  gap: 10px;
+}
+.footer .logo-zone .logo-list .logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--bg-primary-color);
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer .logo-zone .logo-list .logo:hover {
+  background: var(--bg-primary-color);
+  color: #FFF;
+}
+.footer .subscribe-zone .sub-desc {
+  font-size: 1.4rem;
+  line-height: 1.85;
+  font-weight: normal;
+  width: 82%;
+}
+.footer form.subcribe-form {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+}
+.footer form.subcribe-form input {
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #406181;
+  background: var(--bg-secondary-color);
+  padding: 0 10px;
+  color: #9CA8B1;
+}
+.footer form.subcribe-form input::placeholder {
+  color: #9CA8B1;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.85;
+}
+.footer form.subcribe-form .footer-btn {
+  color: #FFF;
+  min-width: 108px;
+  border-radius: 4px;
+  height: 46px;
+  font-size: 1.4rem;
+  line-height: 1.85;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */

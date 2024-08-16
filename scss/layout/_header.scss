@@ -1,0 +1,52 @@
+.header {
+  padding: 36px 0px;
+  background: var(--bg-secondary-color);
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .auth {
+    line-height: 1.75;
+
+    .login {
+      margin-right: 28px;
+
+      &:hover {
+        color: #fff;
+        text-shadow: 1px 0 0 currentColor;
+      }
+    }
+
+    .sign-up-btn {
+      min-width: 104px;
+      height: 44px;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.navbar .list {
+  display: flex;
+  gap: 42px;
+
+  .item:hover,
+  .item.active {
+    color: #fff;
+    text-shadow: 1px 0 0 currentColor;
+  }
+
+  .item.active::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    position: relative;
+    right: 6px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #fff;
+  }
+}

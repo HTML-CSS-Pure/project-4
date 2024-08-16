@@ -1,0 +1,59 @@
+.hero {
+  background: var(--bg-secondary-color);
+  padding: 40px 0 110px;
+  color: #fff;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-left {
+    width: 44%;
+
+    .title {
+      color: #fff;
+      line-height: 1.14;
+      letter-spacing: -1.4px;
+    }
+
+    .desc {
+      margin-top: 22px;
+      font-size: 1.8rem;
+      line-height: 1.67;
+    }
+
+    .booking {
+      margin-top: 38px;
+      .btn {
+        margin-right: 38px;
+      }
+    }
+  }
+
+  &-right {
+    width: 45%;
+    display: flex;
+    align-items: center;
+
+    .img-left,
+    .img-right {
+      object-fit: cover;
+    }
+
+    .img-left {
+      width: 330px;
+      height: 540px;
+      border-radius: 6px;
+      z-index: 1;
+    }
+
+    .img-right {
+      width: 210px;
+      height: 410px;
+      margin-left: -6px;
+      border-radius: 0px 6px 6px 0px;
+    }
+  }
+}

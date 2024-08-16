@@ -1,0 +1,27 @@
+@use "../abstracts" as var;
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn {
+  // min-width: 205px;
+  // height: 60px;
+  // color: #fff;
+  // background: #2e80ce;
+  // border: none;
+  // border-radius: 999px;
+  // font-family: inherit;
+  // font-weight: 400;
+  // font-size: 1.8rem;
+  // line-height: 1.67;
+  // text-align: center;
+  // transition: all ease 0.25s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
