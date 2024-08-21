@@ -1,59 +1,42 @@
-.hero {
-  background: var(--bg-secondary-color);
-  padding: 40px 0 110px;
-  color: #fff;
+.hero { 
+  margin-top: 74px;
 
-  &-content {
+  .content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
-  &-left {
-    width: 44%;
+  .hero-left {
+    width: 47%;
+    display: flex;
+    position: relative;
 
-    .title {
-      color: #fff;
-      line-height: 1.14;
-      letter-spacing: -1.4px;
+    .picture-cat {
+      background: #FE997B;
+      border-radius: 16px;
+      img {
+        width: 388px;
+        height: 488px;
+        object-fit: cover;
+      }
+
     }
 
-    .desc {
-      margin-top: 22px;
-      font-size: 1.8rem;
-      line-height: 1.67;
-    }
+    .picture-dog {
+      margin-top: auto;
 
-    .booking {
-      margin-top: 38px;
-      .btn {
-        margin-right: 38px;
+      img {
+        border-radius: 16px;
+        border: 1px solid #FFF;
+        background: #FAA7AD;
+        width: 186px;
+        height: 244px;
+        object-fit: cover;
       }
     }
+
   }
 
-  &-right {
-    width: 45%;
-    display: flex;
-    align-items: center;
-
-    .img-left,
-    .img-right {
-      object-fit: cover;
-    }
-
-    .img-left {
-      width: 330px;
-      height: 540px;
-      border-radius: 6px;
-      z-index: 1;
-    }
-
-    .img-right {
-      width: 210px;
-      height: 410px;
-      margin-left: -6px;
-      border-radius: 0px 6px 6px 0px;
-    }
+  .hero-right {
+    width: 44%;
   }
 }

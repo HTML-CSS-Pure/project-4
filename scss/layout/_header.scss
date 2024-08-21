@@ -1,52 +1,58 @@
 .header {
-  padding: 36px 0px;
-  background: var(--bg-secondary-color);
+  padding: 26px 0;
 
-  &-content {
+  .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .auth {
-    line-height: 1.75;
+  .logo {
+    display: flex;
+    align-items: center;
 
-    .login {
-      margin-right: 28px;
+    .icon {
+      width: 35px;
+    }
+
+    .logo-text {
+      margin-left: 8px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+  
+  nav.navbar {
+    .menu {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .item {
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1;
+      color : #5E6085;
 
       &:hover {
-        color: #fff;
+        color : var(--text-heading-color);
         text-shadow: 1px 0 0 currentColor;
       }
     }
+  }
 
-    .sign-up-btn {
-      min-width: 104px;
-      height: 44px;
-      font-size: 1.6rem;
+  .register {
+    .btn {
+      --button-color : #000958;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding: 18px 30px;
+
+      &:hover {
+        --button-color : var(--bg-button-color);
+      }
     }
-  }
-}
-
-.navbar .list {
-  display: flex;
-  gap: 42px;
-
-  .item:hover,
-  .item.active {
-    color: #fff;
-    text-shadow: 1px 0 0 currentColor;
-  }
-
-  .item.active::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    display: inline-block;
-    position: relative;
-    right: 6px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background: #fff;
   }
 }
