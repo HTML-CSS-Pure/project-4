@@ -609,6 +609,49 @@ a {
   text-underline-offset: 2px;
 }
 
+.agency {
+  margin-top: 77px;
+  padding-top: 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.agency-left {
+  width: 40%;
+}
+.agency-left .comment {
+  color: #5E6085;
+  font-family: Sora;
+  font-weight: 600;
+}
+.agency-left .title {
+  margin-top: 15px;
+  color: #000958;
+  font-family: Sora;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.19;
+}
+.agency-left .desc {
+  color: #656689;
+  width: 431px;
+  line-height: 1.87;
+}
+.agency-left .agency-feature {
+  margin-top: 54px;
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  gap: 36px;
+}
+.agency-left .agency-feature input[type=checkbox][aria-disabled=true]:disabled {
+  width: 24px;
+  height: 24px;
+  background: red;
+}
+.agency-right {
+  width: 42%;
+}
+
 button {
   border: none;
   background: none;
