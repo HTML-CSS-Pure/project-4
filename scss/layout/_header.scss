@@ -1,5 +1,6 @@
 .header {
   padding: 26px 0;
+  background: inherit;
 
   .content {
     display: flex;
@@ -36,7 +37,7 @@
       line-height: 1;
       color : #5E6085;
 
-      &:hover {
+      &:hover,&.active {
         color : var(--text-heading-color);
         text-shadow: 1px 0 0 currentColor;
       }
