@@ -612,6 +612,8 @@ a {
 .agency {
   margin-top: 77px;
   padding-top: 53px;
+}
+.agency .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -639,17 +641,204 @@ a {
 }
 .agency-left .agency-feature {
   margin-top: 54px;
-  display: grid;
+  display: inline-grid;
   grid-template: 1fr 1fr/1fr 1fr;
   gap: 36px;
 }
-.agency-left .agency-feature input[type=checkbox][aria-disabled=true]:disabled {
-  width: 24px;
-  height: 24px;
-  background: red;
+.agency-left .agency-feature .item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.agency-left .agency-feature img.checkbox {
+  box-shadow: 0px 4px 15px -3px rgba(255, 93, 49, 0.69);
 }
 .agency-right {
   width: 42%;
+  position: relative;
+}
+.agency-right .exp-zone {
+  position: absolute;
+  top: 157px;
+  left: -92px;
+  padding: 30px 26px;
+  border-radius: 10px;
+  background: #5BD6E2;
+  box-shadow: -15px 26px 48px 0px rgba(85, 240, 255, 0.17);
+  text-align: center;
+  font-family: Sora;
+}
+.agency-right .exp-zone .icon {
+  position: absolute;
+  top: -40px;
+  right: -32px;
+}
+.agency-right .exp-zone .years {
+  color: #FFF;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1; /* 100% */
+}
+.agency-right .exp-zone .exp {
+  margin-top: 14px;
+  width: 83px;
+  color: #C6F4F9;
+  font-size: 1.4rem;
+  line-height: 1.42;
+}
+.agency-right .agency-img {
+  position: relative;
+  border-radius: 16px;
+}
+.agency-right .agency-img .img {
+  width: 494px;
+  height: 559px;
+  object-fit: cover;
+  transform: scaleX(-1);
+  display: block;
+}
+.agency-right .agency-img .img-icon {
+  position: absolute;
+  right: -50px;
+  top: 150px;
+}
+.agency-right .agency-img::after {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: -1;
+  content: "";
+  height: 336px;
+  width: 100%;
+  display: block;
+  background: linear-gradient(180deg, #FCE0EF 0%, #FAC3D1 100%);
+}
+
+.vacation {
+  margin-top: 130px;
+}
+.vacation .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vacation-left {
+  width: 39%;
+  margin: 16px 42px 55px 0;
+  position: relative;
+}
+.vacation-left .main-img {
+  background: linear-gradient(180deg, #C6E2FA 0%, #94C2EA 100%);
+  box-shadow: 0px 17px 77px -8px rgba(190, 165, 139, 0.17);
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: -45px;
+}
+.vacation-left .vacation-icon {
+  position: absolute;
+}
+.vacation-left .vacation-icon.icon-1 {
+  top: 12px;
+  right: 64px;
+}
+.vacation-left .vacation-icon.icon-2 {
+  top: -16px;
+  right: 12px;
+}
+.vacation-left .vacation-icon.icon-3 {
+  top: 33px;
+  right: -21px;
+}
+.vacation-left .vacation-icon.icon-4 {
+  top: 268px;
+  right: -33px;
+}
+.vacation-left .vacation-icon.icon-5 {
+  right: 19px;
+  bottom: 150px;
+}
+.vacation-left .vacation-icon.icon-6 {
+  right: -42px;
+  bottom: -55px;
+}
+.vacation-right {
+  width: 47%;
+}
+.vacation-right .intro .title {
+  color: var(--text-heading-color);
+  font-family: Sora;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.19;
+}
+.vacation-right .intro .desc {
+  width: 511px;
+  margin-top: 24px;
+  color: var(--text-paragraph-color);
+  line-height: 1.87;
+}
+.vacation-right .vacation-list {
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.vacation-right .vacation-list::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  opacity: 0.07;
+  background: #FF5B2E;
+  bottom: -10px;
+}
+.vacation-right .vacation-list .item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+.vacation-right .vacation-list .item.active {
+  padding-bottom: 5px;
+}
+.vacation-right .vacation-list .item.active::after {
+  content: "";
+  height: 2px;
+  width: 95px;
+  position: absolute;
+  opacity: 1;
+  background: #FF5B2E;
+  bottom: -10px;
+}
+.vacation-right .vacation-list .item img {
+  object-fit: cover;
+  width: 20px;
+  height: 20px;
+}
+.vacation-right .vacation-list .item .service {
+  color: var(--text-list-color);
+  font-family: Sora;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.vacation-right .info {
+  margin-top: 36px;
+  width: 391px;
+  color: var(--text-paragraph-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.71;
+}
+.vacation-right .view {
+  margin-top: 32px;
+  color: var(--bg-button-color);
+  font-weight: 500;
+  text-decoration: underline;
+  display: block;
+}
+.vacation-right .view:hover {
+  opacity: 0.6;
 }
 
 button {

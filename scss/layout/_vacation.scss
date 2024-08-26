@@ -1,0 +1,155 @@
+.vacation {
+    margin-top: 130px;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    &-left {
+        width: 39%;
+        margin: 16px 42px 55px 0;
+        position: relative;
+
+        .main-img {
+            background: linear-gradient(180deg, #C6E2FA 0%, #94C2EA 100%);
+            box-shadow: 0px 17px 77px -8px rgba(190, 165, 139, 0.17);
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            object-position: -45px;
+        }
+
+        .vacation-icon {
+            position: absolute;
+
+            &.icon-1 {
+                top: 12px;
+                right: 64px;
+            }
+
+            &.icon-2 {
+                top: -16px;
+                right: 12px;
+            }
+
+            &.icon-3 {
+                top: 33px;
+                right: -21px;
+            }
+
+            &.icon-4 {
+                top: 268px;
+                right: -33px;
+            }
+
+            &.icon-5 {
+                right: 19px;
+                bottom: 150px;
+            }
+
+            &.icon-6 {
+                right: -42px;
+                bottom: -55px;
+            }
+        }
+    }
+
+    &-right {
+        width: 47%;
+
+        .intro {
+            .title {
+                color: var(--text-heading-color);
+                font-family: Sora;
+                font-size: 5.2rem;
+                font-weight: 700;
+                line-height: 1.19
+            }
+
+            .desc {
+                width: 511px;
+                margin-top: 24px;
+                color: var(--text-paragraph-color);
+                line-height: 1.87 /* 187.5% */
+            }
+        }
+
+        .vacation-list {
+            margin-top: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                opacity: 0.07;
+                background: #FF5B2E;
+                bottom: -10px;
+            }
+
+            .item {
+                display: flex;
+                align-items: center;
+                position: relative;
+                gap: 10px;
+
+                &.active {
+                    padding-bottom:  5px;
+
+                    &::after {
+                        content: "";
+                        height: 2px;
+                        width: 95px;
+                        position: absolute;
+                        opacity: 1;
+                        background: #FF5B2E;
+                        bottom: -10px;
+                    }
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .service {
+                    color: var(--text-list-color);
+                    font-family: Sora;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }
+
+
+            }
+        }
+
+        .info {
+            margin-top: 36px;
+            width: 391px;
+            color: var(--text-paragraph-color);
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.71; 
+        }
+
+        .view {
+            margin-top: 32px;
+            color: var(--bg-button-color);
+            font-weight: 500;
+            text-decoration: underline;
+            display: block;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
