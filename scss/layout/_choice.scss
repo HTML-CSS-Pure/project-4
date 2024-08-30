@@ -1,0 +1,47 @@
+.choice {
+    padding: 86px 0;
+    background: var(--bg-secondary-color);
+
+    .intro {
+        text-align: center;
+        .title {
+            color: var(--text-heading-color);
+            font-family: Sora;
+            font-size: 5.2rem;
+            font-weight: 700;
+            line-height: 1.19
+        }
+
+        .desc {
+            margin : 24px auto 0;
+            width: 60%;
+            color: var(--text-paragraph-color);
+            line-height: 1.87;
+            
+        }
+    }
+
+    .plan-period {
+        margin-top: 38px;
+    }
+
+
+    .plan-list {
+        margin-top: 56px;
+        display: flex;
+        justify-content: space-between;
+        gap: 44px;
+    }
+
+    .plan-item {
+        padding: 30px 28px 43px;
+        border-radius: 20px;
+        background: #FFF;
+        flex-grow: 1;
+    }
+
+    .plan-cta {
+        width: 100%;
+        display: block;
+    }
+}
