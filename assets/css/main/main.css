@@ -1038,6 +1038,7 @@ a {
 }
 
 .choice {
+  --plan-btn-width: 130px;
   padding: 86px 0;
   background: var(--bg-secondary-color);
 }
@@ -1058,7 +1059,59 @@ a {
   line-height: 1.87;
 }
 .choice .plan-period {
-  margin-top: 38px;
+  margin: 38px auto 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 276px;
+  height: 56px;
+  border: 1px solid;
+  border-color: var(--bg-button-color);
+  border-radius: 999px;
+  position: relative;
+}
+.choice .plan-period button.plan-choice {
+  width: var(--plan-btn-width);
+  height: 100%;
+  border: none;
+  font-weight: 500;
+  color: var(--bg-button-color);
+  background: transparent;
+  z-index: 2;
+  transition: all ease 0.5s;
+}
+.choice .plan-period button.plan-choice.active {
+  color: #fff;
+}
+.choice .plan-period button.plan-choice.active.monthly ~ .choose-zone {
+  animation: plan-move-left 0.5s;
+  left: 0;
+}
+.choice .plan-period button.plan-choice.active.yearly ~ .choose-zone {
+  animation: plan-move-right 0.5s;
+  right: 0;
+}
+.choice .plan-period .choose-zone {
+  position: absolute;
+  width: 130px;
+  height: 100%;
+  top: 0;
+  background: var(--bg-button-color);
+  border-radius: 999px;
+  z-index: 1;
+}
+.choice .plan-period .discount {
+  position: absolute;
+  top: -10px;
+  right: -110px;
+}
+.choice .plan-period .discount .amount {
+  position: absolute;
+  top: 9px;
+  left: 28px;
+  color: #5860A6;
+  transform: rotate(-5deg);
+  font-family: Pattaya, sans-serif;
+  font-size: 1.2rem;
 }
 .choice .plan-list {
   margin-top: 56px;
@@ -1072,9 +1125,176 @@ a {
   background: #FFF;
   flex-grow: 1;
 }
+.choice .plan-item .plan-desc {
+  color: var(--bg-button-color);
+  font-size: 1.2rem;
+}
+.choice .plan-item .plan-title {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #3F4065;
+  font-family: Sora;
+  font-size: 1.8rem;
+}
+.choice .plan-item .price {
+  margin-top: 24px;
+  color: var(--text-heading-color);
+  font-family: Sora;
+  font-size: 3.3rem;
+  font-weight: 700;
+  line-height: 1.03;
+}
+.choice .plan-item .plan-cta {
+  margin-top: 22px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.choice .plan-item ul.plan-detail {
+  margin-top: 24px;
+  color: var(--text-paragraph-color);
+  font-size: 1.4rem;
+}
+.choice .plan-item ul.plan-detail li {
+  display: flex;
+  gap: 12px;
+}
+.choice .plan-item ul.plan-detail li .icon {
+  background: url(../../img/icon/check-period-item.svg);
+  width: 14px;
+  height: 14px;
+}
+.choice .plan-item ul.plan-detail li ~ li {
+  margin-top: 18px;
+}
+.choice .plan-item ul.plan-detail li.none .icon {
+  opacity: 0.4;
+}
 .choice .plan-cta {
   width: 100%;
   display: block;
+}
+
+@keyframes plan-move-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - var(--plan-btn-width));
+  }
+}
+@keyframes plan-move-left {
+  from {
+    left: calc(100% - var(--plan-btn-width));
+  }
+  to {
+    left: 0;
+  }
+}
+.review {
+  padding: 53px 0 65px;
+}
+.review-zone {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.review-nav {
+  width: 54px;
+  height: 54px;
+  border: 1px solid var(--bg-button-color);
+  border-radius: 50%;
+  color: var(--bg-button-color);
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-nav.nav-left {
+  transform: rotate(180deg);
+}
+.review-nav:hover {
+  color: #fff;
+  background: var(--bg-button-color);
+}
+.review-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-main .main-left {
+  --img-review-width: 274px;
+  --img-border-radius: 137px;
+  width: var(--img-review-width);
+  height: 427px;
+  position: relative;
+  margin-right: 115px;
+  flex-shrink: 0;
+}
+.review-main .main-left img {
+  width: var(--img-review-width);
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--img-border-radius);
+  position: absolute;
+}
+.review-main .main-left::after {
+  content: "";
+  width: var(--img-review-width);
+  position: absolute;
+  height: 350px;
+  background: #FFDA54;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--img-border-radius);
+}
+.review-main .main-right .title {
+  color: var(--text-heading-color);
+  font-family: Sora;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.19;
+}
+.review-main .main-right .desc {
+  font-size: 1.8rem;
+  line-height: 1.55;
+  margin-top: 24px;
+}
+.review-main .main-right .author {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.review-main .main-right .author .line {
+  width: 28px;
+  height: 2px;
+  background: #000;
+}
+.review-main .main-right .author .author-name {
+  color: #282828;
+  font-family: Sora;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.review-page {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 56px;
+}
+.review-page .page {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid var(--bg-button-color);
+  display: inline-block;
+  cursor: pointer;
+}
+.review-page .page.active {
+  width: 24px;
+  background: var(--bg-button-color);
 }
 
 button {

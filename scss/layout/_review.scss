@@ -1,0 +1,127 @@
+.review {
+    padding: 53px 0 65px;
+
+    &-zone {
+        display: flex;
+        align-items: center;
+        gap: 44px;
+    }
+
+    &-nav {
+        width: 54px;
+        height: 54px;
+        border: 1px solid var(--bg-button-color);
+        border-radius: 50%;
+        color : var(--bg-button-color);
+        cursor: pointer;
+
+        flex-shrink: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.nav-left {
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            color : #fff;
+            background: var(--bg-button-color);
+        }
+    }
+
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .main-left {
+            --img-review-width : 274px;
+            --img-border-radius : 137px;
+            width: var(--img-review-width);
+            height: 427px;
+            position: relative;
+            margin-right: 115px;
+            flex-shrink: 0;
+
+            img {
+                width: var(--img-review-width);
+                height: 100%;
+                object-fit: cover;
+                border-radius: var(--img-border-radius);
+                position: absolute;
+
+            }
+
+            &::after {
+                content: "";
+                width: var(--img-review-width);
+                position: absolute;
+                height: 350px;
+                background: #FFDA54;
+                z-index: -1;
+                bottom: 0;
+                left: 0;
+                border-radius: var(--img-border-radius);
+            }
+        }
+
+        .main-right {
+            .title {
+                color: var(--text-heading-color);
+                font-family: Sora;
+                font-size: 5.2rem;
+                font-weight: 700;
+                line-height: 1.19;
+            }
+
+            .desc {
+                font-size: 1.8rem;
+                line-height: 1.55; 
+                margin-top: 24px;
+            }
+
+            .author {
+                margin-top: 34px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .line {
+                    width: 28px;
+                    height: 2px;
+                    background: #000;
+                }
+
+                .author-name {
+                    color: #282828;
+                    font-family: Sora;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &-page {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 56px;
+
+        .page {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            border: 1px solid var(--bg-button-color);
+            display: inline-block;
+            cursor: pointer;
+
+            &.active {
+                width: 24px;
+                background: var(--bg-button-color);
+            }
+        }
+    }
+}

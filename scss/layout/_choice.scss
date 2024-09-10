@@ -1,4 +1,5 @@
 .choice {
+    --plan-btn-width : 130px;
     padding: 86px 0;
     background: var(--bg-secondary-color);
 
@@ -22,9 +23,68 @@
     }
 
     .plan-period {
-        margin-top: 38px;
-    }
+        margin: 38px auto 0px;
+        display: flex;
+        justify-content: space-between;
+        width: 276px;
+        height: 56px;
+        border: 1px solid;
+        border-color: var(--bg-button-color);
+        border-radius: 999px;
 
+        position: relative;
+
+        button.plan-choice {
+            width: var(--plan-btn-width);
+            height: 100%;
+            border: none;
+            font-weight: 500;
+            color: var(--bg-button-color);
+            background: transparent;
+            z-index: 2;
+            transition: all ease 0.5s;
+
+            &.active {
+                color: #fff;
+
+                &.monthly ~ .choose-zone {
+                    animation: plan-move-left 0.5s;
+                    left: 0;
+                }
+
+                &.yearly ~ .choose-zone {
+                    animation: plan-move-right 0.5s;
+                    right: 0;
+                }
+            }
+        }
+
+        .choose-zone {
+            position: absolute;
+            width: 130px;
+            height: 100%;
+            top: 0;
+            background: var(--bg-button-color);
+            border-radius: 999px;
+            z-index: 1;
+        }
+
+        .discount {
+            position: absolute;
+            top: -10px;
+            right: -110px;
+
+            .amount {
+                position: absolute;
+                top: 9px;
+                left: 28px;
+                color: #5860A6;
+                transform: rotate(-5deg);
+                font-family: Pattaya, sans-serif;
+                font-size: 1.2rem;
+            }
+        }
+    }
 
     .plan-list {
         margin-top: 56px;
@@ -38,10 +98,86 @@
         border-radius: 20px;
         background: #FFF;
         flex-grow: 1;
+
+        .plan-desc {
+            color : var(--bg-button-color);
+            font-size: 1.2rem;
+        }
+
+        .plan-title {
+            margin-top: 8px;
+            font-weight: 600;
+            color: #3F4065;
+            font-family: Sora;
+            font-size: 1.8rem;
+        }
+
+        .price {
+            margin-top: 24px;
+            color: var(--text-heading-color);
+            font-family: Sora;
+            font-size: 3.3rem;
+            font-weight: 700;
+            line-height: 1.03;
+        }
+
+        .plan-cta {
+            margin-top: 22px;
+            font-size: 16px;
+            font-weight: 600;
+
+        }
+
+        ul.plan-detail {
+            margin-top: 24px;
+            color: var(--text-paragraph-color);
+            font-size: 1.4rem;
+
+            li {
+                display: flex;
+                gap: 12px;
+
+                .icon {
+                    background: url(../../img/icon/check-period-item.svg);
+                    width: 14px;
+                    height: 14px;
+                }
+
+
+
+                ~ li {
+                    margin-top: 18px;
+                }
+            }
+
+            li.none .icon {
+                opacity: 0.4;
+            }
+        }
     }
 
     .plan-cta {
         width: 100%;
         display: block;
+    }
+}
+
+@keyframes plan-move-right {
+    from {
+        left : 0;
+    }
+
+    to {
+        left : calc(100% - var(--plan-btn-width))
+    }
+}
+
+@keyframes plan-move-left {
+    from {
+        left : calc(100% - var(--plan-btn-width));
+    }
+
+    to {
+        left : 0;
     }
 }
