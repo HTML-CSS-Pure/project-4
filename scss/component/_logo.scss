@@ -1,0 +1,15 @@
+.logo {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      width: 35px;
+    }
+
+    .logo-text {
+      margin-left: 8px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
