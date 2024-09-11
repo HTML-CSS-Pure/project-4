@@ -99,6 +99,12 @@
                 align-items: center;
                 position: relative;
                 gap: 10px;
+                cursor: pointer;
+
+                &:not(.active):hover p {
+                    color: var(--bg-button-color);
+                    transform: translateY(-5px);
+                }
 
                 &.active {
                     padding-bottom:  5px;

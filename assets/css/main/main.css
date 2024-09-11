@@ -785,6 +785,11 @@ a {
   align-items: center;
   position: relative;
   gap: 10px;
+  cursor: pointer;
+}
+.vacation-right .vacation-list .item:not(.active):hover p {
+  color: var(--bg-button-color);
+  transform: translateY(-5px);
 }
 .vacation-right .vacation-list .item.active {
   padding-bottom: 5px;
@@ -962,6 +967,10 @@ a {
 .groomer-member {
   flex-shrink: 1;
   margin-top: 43px;
+  cursor: pointer;
+}
+.groomer-member:hover {
+  transform: translateY(-15px);
 }
 .groomer-member * {
   text-align: center;
